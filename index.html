@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Now Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="community-text">Join Our JPI Community Group</h1>
+        <div class="button-container">
+            <a href="https://facebook.com/groups/jpicommunity2.0/" class="join-now-button">Join Now</a>
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container for Text and Button */
+.container {
+    text-align: center;
+}
+
+/* Community Text Styling */
+.community-text {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Button Container */
+.button-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+/* Join Now Button */
+.join-now-button {
+    display: inline-block;
+    padding: 15px 45px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Background Animation */
+.join-now-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+/* Hover Effect */
+.join-now-button:hover::before {
+    left: 0;
+}
+
+.join-now-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 65, 108, 0.6);
+}
+
+/* Fade-In Animation for Text */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
